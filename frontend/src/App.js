@@ -40,7 +40,7 @@ function App() {
   function send()
   {
     setstatus(true);
-  axios.post("http://localhost:5000/sendmail",{msg:msg, emailList:emailList})
+  axios.post("https://bulkmail-react.vercel.app/sendmail",{msg:msg, emailList:emailList})
     .then(function (response) {
       
       if (response.data === true) {
