@@ -13,9 +13,9 @@ mongoose.connect("mongodb+srv://AshleyjeniferJ:Ronel@cluster0.eqlttex.mongodb.ne
 {
   console.log("success, connected to db")
 })
-.catch(function()
+.catch(function(error)
 {
-  console.log("error in connecting db")
+  console.log(error +"error in connecting db")
 })
 const credential = mongoose.model("credential",{},"bulkmail")
 app.post("/sendmail",function(req,res)
